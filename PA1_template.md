@@ -30,13 +30,6 @@ The median number of steps per day is 10395
 
 ```r
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.1.2
-```
-
-```r
 avg.per.int <- aggregate(data$steps, by=list(data$interval),
                       FUN=mean, na.rm=TRUE)
 colnames(avg.per.int)<-c("interval","avg.steps")
